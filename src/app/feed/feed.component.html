@@ -1,0 +1,80 @@
+<div class="container" style="background-color: #E1C184;">
+    <div class="title">
+        Notify screen manager
+    </div>
+    <div class="item instagram">
+        <div  class="item-icon">
+            <img src="../../assets/images/instagram-square-brands.svg" alt="">
+        </div>
+        <div  class="item-button"> 
+            <mat-slide-toggle  (change)="toggle($event,'instagram')" >Instagram</mat-slide-toggle> 
+        </div>
+        <div>
+            <mat-slider *ngIf="displayInstagram"
+  thumbLabel  
+  [(ngModel)]="valueInstagram"
+  tickInterval="100"
+  min="1"
+  max="100"></mat-slider>
+        </div>    
+    </div>
+    <div class="space">&nbsp;</div>
+    <div class="item">
+        <div  class="item-icon">
+            <img src="../../assets/images/facebook-square-brands.svg" alt="">
+        </div>
+        <div  class="item-button"> 
+            <mat-slide-toggle  (change)="toggle($event,'facebook')" >Facebook</mat-slide-toggle> 
+        </div>
+        <div>
+            <mat-slider *ngIf="displayFacebook"
+  thumbLabel  
+  [(ngModel)]="valueFacebook"
+  tickInterval="100"
+  min="1"
+  max="100"></mat-slider>
+        </div>    
+    </div>
+
+    <div class="item">
+        <div  class="item-icon">
+            <img src="../../assets/images/linkedin-brands.svg" alt="">
+        </div>
+        <div  class="item-button"> 
+            <mat-slide-toggle  (change)="toggle($event,'linkedin')" >Linkedin</mat-slide-toggle> 
+        </div>
+       
+    </div>
+
+    <div class="item">
+        <div  class="item-icon">
+            <img src="../../assets/images/youtube-square-brands.svg" alt="">
+        </div>
+        <div  class="item-button"> 
+            <mat-slide-toggle  (change)="toggle($event,'youtube')" >YouTube</mat-slide-toggle> 
+        </div>   
+        <div>
+            <mat-slider *ngIf="displayYouTube"
+  thumbLabel  
+  [(ngModel)]="valueYouTube"
+  tickInterval="100"
+  min="1"
+  max="100"></mat-slider>
+        </div>    
+    </div>
+    
+    <div class="btn-container">
+        <div class="btn" (click)="save()">
+            Save
+        </div>
+    </div>
+    <div class="message-container">
+        {{message}}
+    </div>
+    
+    <!--mat-slide-toggle  (change)="toggle($event)" >Facebook</mat-slide-toggle> 
+    <mat-slide-toggle  (change)="toggle($event)" >Linkedin</mat-slide-toggle> 
+    <mat-slide-toggle  (change)="toggle($event)" >YouTube</mat-slide-toggle--> 
+</div>
+
+
